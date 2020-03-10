@@ -1,0 +1,1 @@
+This for any possible additions or notes to leave to each other - I dunno I just thought we needed a readme to stay cool
