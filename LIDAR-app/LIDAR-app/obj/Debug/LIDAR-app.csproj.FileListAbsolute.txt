@@ -20,6 +20,7 @@ C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Debug\OpenTK.xml
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Debug\OpenTK.GLControl.pdb
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Debug\OpenTK.GLControl.xml
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\obj\Debug\LIDAR-app.csprojAssemblyReference.cache
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\obj\Debug\LIDAR_app.Form1.resources
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\obj\Debug\LIDAR_app.Properties.Resources.resources
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\obj\Debug\LIDAR-app.csproj.GenerateResource.cache
