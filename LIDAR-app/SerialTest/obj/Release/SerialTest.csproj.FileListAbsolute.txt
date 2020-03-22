@@ -1,0 +1,8 @@
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Release\SerialTest.exe.config
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Release\SerialTest.exe
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Release\SerialTest.pdb
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Release\SerialTest.SettingsForm.resources
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Release\SerialTest.Properties.Resources.resources
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Release\SerialTest.csproj.GenerateResource.cache
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Release\SerialTest.exe
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Release\SerialTest.pdb
