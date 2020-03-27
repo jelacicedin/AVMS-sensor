@@ -1,4 +1,4 @@
-LIDAR-app
+#LIDAR-app
 
 The commands it sends to the arduino are of the form _._
 where the first _ can be either "Azimuth" (which means the base motor) or "Elevation" (which means the sensor motor). 
