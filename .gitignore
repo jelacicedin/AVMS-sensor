@@ -9,3 +9,6 @@ LIDAR-app/Visualizer/obj/Debug/Visualizer.pdb
 LIDAR-app/Visualizer/obj/Debug/Visualizer.Properties.Resources.resources
 LIDAR-app/Visualizer/obj/Debug/Visualizer.csprojAssemblyReference.cache
 LIDAR-app/LIDAR-app/obj/Debug/LIDAR-app.csproj.FileListAbsolute.txt
+LIDAR-app/.vs/LIDAR-app/v16/Server/sqlite3/storage.ide-wal
+LIDAR-app/.vs/LIDAR-app/v16/Server/sqlite3/storage.ide-shm
+LIDAR-app/.vs/LIDAR-app/v16/.suo
