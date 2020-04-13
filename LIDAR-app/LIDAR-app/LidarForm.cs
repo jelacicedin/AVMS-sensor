@@ -239,6 +239,7 @@ namespace LIDAR_app
 
             OpenTKLib.OpenTKForm fOTK = new OpenTKLib.OpenTKForm();
             fOTK.ShowPointCloud(room);
+
             fOTK.ShowDialog();
 
         }
