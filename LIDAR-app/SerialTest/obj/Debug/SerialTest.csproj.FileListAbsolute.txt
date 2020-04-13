@@ -1,9 +1,14 @@
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Debug\SerialTest.exe.config
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Debug\SerialTest.exe
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Debug\SerialTest.pdb
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Debug\OpenTKLib.dll
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Debug\OpenTK.GLControl.dll
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Debug\OpenTKLib.pdb
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Debug\OpenTKLib.dll.config
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Debug\SerialTest.csprojAssemblyReference.cache
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Debug\SerialTest.SettingsForm.resources
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Debug\SerialTest.Properties.Resources.resources
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Debug\SerialTest.csproj.GenerateResource.cache
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Debug\SerialTest.csproj.CopyComplete
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Debug\SerialTest.exe
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Debug\SerialTest.pdb

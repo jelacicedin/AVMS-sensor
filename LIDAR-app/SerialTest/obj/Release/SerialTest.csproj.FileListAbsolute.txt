@@ -6,3 +6,9 @@ C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Release\SerialTest.csproj.GenerateResource.cache
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Release\SerialTest.exe
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Release\SerialTest.pdb
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Release\SerialTest.csprojAssemblyReference.cache
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Release\OpenTKLib.dll
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Release\OpenTK.GLControl.dll
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Release\OpenTKLib.pdb
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\bin\Release\OpenTKLib.dll.config
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\SerialTest\obj\Release\SerialTest.csproj.CopyComplete

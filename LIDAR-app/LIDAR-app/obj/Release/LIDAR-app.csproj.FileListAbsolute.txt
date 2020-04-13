@@ -3,13 +3,12 @@ C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\LIDAR-app.pdb
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\OpenTK.dll
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\OpenTK.GLControl.dll
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\OpenTKLib.dll
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\SerialTest.exe
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\OpenTKLib.pdb
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\OpenTKLib.dll.config
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\SerialTest.pdb
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\SerialTest.exe.config
-C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\OpenTK.pdb
-C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\OpenTK.xml
-C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\OpenTK.GLControl.pdb
-C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\bin\Release\OpenTK.GLControl.xml
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\obj\Release\LIDAR-app.csprojAssemblyReference.cache
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\obj\Release\LIDAR_app.LidarForm.resources
 C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\LIDAR-app\obj\Release\LIDAR_app.Properties.Resources.resources

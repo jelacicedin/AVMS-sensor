@@ -1,0 +1,6 @@
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\packages\0.9.0.9 OpenGL Sources\bin\UnitTestsRunAll.dll
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\packages\0.9.0.9 OpenGL Sources\bin\UnitTestsRunAll.pdb
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\packages\0.9.0.9 OpenGL Sources\UnitTestsRunAll\obj\Debug\_UnitTestsRunAll.csprojAssemblyReference.cache
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\packages\0.9.0.9 OpenGL Sources\UnitTestsRunAll\obj\Debug\_UnitTestsRunAll.csproj.CopyComplete
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\packages\0.9.0.9 OpenGL Sources\UnitTestsRunAll\obj\Debug\UnitTestsRunAll.dll
+C:\Users\jelac\OneDrive\Desktop\AVMS-sensor\AVMS-sensor\LIDAR-app\packages\0.9.0.9 OpenGL Sources\UnitTestsRunAll\obj\Debug\UnitTestsRunAll.pdb

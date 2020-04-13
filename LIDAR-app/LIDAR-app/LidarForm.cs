@@ -8,6 +8,7 @@ using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,6 +27,7 @@ namespace LIDAR_app
         private readonly object locker = new object();
 
         int az = 0, el = 0;
+
 
         public LidarForm()
         {
@@ -159,7 +161,7 @@ namespace LIDAR_app
             {
                 _serialPort.WriteLine(Motors.Azimuth + "." + az.ToString());
                 Thread.Sleep(100);
-                _serialPort.WriteLine(Motors.Azimuth + "." + el.ToString());
+                _serialPort.WriteLine(Motors.Elevation + "." + el.ToString());
                 Thread.Sleep(100);
             }
 
@@ -167,7 +169,60 @@ namespace LIDAR_app
 
         private void buttonVisualize_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Not implemented yet...");
+            //MessageBox.Show("Not implemented yet...");
+            //OpenTKLib.PointCloudVertices cube = OpenTKLib.PointCloudVertices.CreateCube_Corners(50);
+
+
+            ////string input = "b's357d180p577t\n'";
+            //// Split on one or more non-digit characters.
+
+            OpenTKLib.PointCloudVertices room = new OpenTKLib.PointCloudVertices();
+
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "raw_Erik.txt");
+            string[] readText = File.ReadAllLines(path);
+
+            string[] number1 = Regex.Split(readText[0], @"\D+");
+
+            string test = "eee";
+
+            try
+            {
+
+                // Open the file to read from.
+
+                foreach (string s in readText)
+                {
+                    string[] numbers = Regex.Split(s, @"\D+");
+                    int distance = int.Parse(numbers[1]);
+                    int phi = int.Parse(numbers[2]);
+                    int theta = int.Parse(numbers[3]);
+
+                    double distance_geom = (double)distance * 0.1;
+                    double phi_geom = (double)phi * PI / 1024;
+                    double theta_geom = (double)theta * PI / 1024;
+
+                    double x = distance_geom * Math.Cos(theta_geom) * Math.Cos(phi_geom);
+                    double y = distance_geom * Math.Sin(theta_geom) * Math.Cos(phi_geom);
+                    double z = distance_geom * Math.Sin(phi_geom);
+
+                    OpenTKLib.Vertex dot = new OpenTKLib.Vertex(x, y, z);
+                    room.Add(dot);
+                }
+
+                OpenTKLib.OpenTKForm fOTK = new OpenTKLib.OpenTKForm();
+                fOTK.ShowPointCloud(room);
+                fOTK.ShowDialog();
+            }
+            catch
+            {
+                Console.WriteLine("Error in path");
+                throw;
+            }
+
+            Console.WriteLine(test + number1[0]);
+
+
+
         }
 
         private void SetCurrentReading()
