@@ -173,55 +173,74 @@ namespace LIDAR_app
             //OpenTKLib.PointCloudVertices cube = OpenTKLib.PointCloudVertices.CreateCube_Corners(50);
 
 
-            ////string input = "b's357d180p577t\n'";
-            //// Split on one or more non-digit characters.
+            //////string input = "b's357d180p577t\n'";
+            ////// Split on one or more non-digit characters.
+
+            //OpenTKLib.PointCloudVertices room = new OpenTKLib.PointCloudVertices();
+
+            //string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "raw_Erik.txt");
+            //string[] readText = File.ReadAllLines(path);
+
+            //string[] number1 = Regex.Split(readText[0], @"\D+");
+
+            //string test = "eee";
+
+            //try
+            //{
+
+            //    // Open the file to read from.
+
+            //    foreach (string s in readText)
+            //    {
+            //        string[] numbers = Regex.Split(s, @"\D+");
+            //        int distance = int.Parse(numbers[1]);
+            //        int phi = int.Parse(numbers[2]);
+            //        int theta = int.Parse(numbers[3]);
+
+            //        double distance_geom = (double)distance * 0.1;
+            //        double phi_geom = (double)phi * PI / 1024;
+            //        double theta_geom = (double)theta * PI / 1024;
+
+            //        double x = distance_geom * Math.Cos(theta_geom) * Math.Cos(phi_geom);
+            //        double y = distance_geom * Math.Sin(theta_geom) * Math.Cos(phi_geom);
+            //        double z = distance_geom * Math.Sin(phi_geom);
+
+            //        OpenTKLib.Vertex dot = new OpenTKLib.Vertex(x, y, z);
+            //        room.Add(dot);
+            //    }
+
+            //    OpenTKLib.OpenTKForm fOTK = new OpenTKLib.OpenTKForm();
+            //    fOTK.ShowPointCloud(room);
+            //    fOTK.ShowDialog();
+            //}
+            //catch
+            //{
+            //    Console.WriteLine("Error in path");
+            //    throw;
+            //}
+
+            //Console.WriteLine(test + number1[0]);
 
             OpenTKLib.PointCloudVertices room = new OpenTKLib.PointCloudVertices();
 
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "raw_Erik.txt");
-            string[] readText = File.ReadAllLines(path);
-
-            string[] number1 = Regex.Split(readText[0], @"\D+");
-
-            string test = "eee";
-
-            try
+            foreach(var row in _dataMatrix)
             {
+                double theta = row[0];
+                double phi = row[1];
+                double distance = row[2];
 
-                // Open the file to read from.
+                double x = distance * Math.Cos(theta) * Math.Cos(phi);
+                double y = distance * Math.Sin(theta) * Math.Cos(phi);
+                double z = distance * Math.Sin(phi);
 
-                foreach (string s in readText)
-                {
-                    string[] numbers = Regex.Split(s, @"\D+");
-                    int distance = int.Parse(numbers[1]);
-                    int phi = int.Parse(numbers[2]);
-                    int theta = int.Parse(numbers[3]);
-
-                    double distance_geom = (double)distance * 0.1;
-                    double phi_geom = (double)phi * PI / 1024;
-                    double theta_geom = (double)theta * PI / 1024;
-
-                    double x = distance_geom * Math.Cos(theta_geom) * Math.Cos(phi_geom);
-                    double y = distance_geom * Math.Sin(theta_geom) * Math.Cos(phi_geom);
-                    double z = distance_geom * Math.Sin(phi_geom);
-
-                    OpenTKLib.Vertex dot = new OpenTKLib.Vertex(x, y, z);
-                    room.Add(dot);
-                }
-
-                OpenTKLib.OpenTKForm fOTK = new OpenTKLib.OpenTKForm();
-                fOTK.ShowPointCloud(room);
-                fOTK.ShowDialog();
-            }
-            catch
-            {
-                Console.WriteLine("Error in path");
-                throw;
+                OpenTKLib.Vertex dot = new OpenTKLib.Vertex(x, y, z);
+                room.Add(dot);
             }
 
-            Console.WriteLine(test + number1[0]);
+            OpenTKLib.OpenTKForm fOTK = new OpenTKLib.OpenTKForm();
+            fOTK.ShowPointCloud(room);
 
-
+            fOTK.ShowDialog();
 
         }
 
