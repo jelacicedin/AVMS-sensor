@@ -146,7 +146,6 @@
             // 
             // textBoxSend
             // 
-            this.textBoxSend.Enabled = false;
             this.textBoxSend.Location = new System.Drawing.Point(6, 19);
             this.textBoxSend.Multiline = true;
             this.textBoxSend.Name = "textBoxSend";

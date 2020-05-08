@@ -33,7 +33,7 @@ namespace LIDAR_app
         {
             InitializeComponent();
             Task.Run(() => SetCurrentReading());
-            
+            Task.Run(() => DisplayData());
             _dataMatrix = null;
         }
 
@@ -78,6 +78,8 @@ namespace LIDAR_app
                 return;
             }
 
+            _dataMatrix = new List<List<double>>();
+
             Task.Run(() => CoverSphere());
         }
 
@@ -86,15 +88,19 @@ namespace LIDAR_app
         /// </summary>
         private void CoverSphere()
         {
-            for (az = 0; az < 360; az++)
+            for (az = 0; az < 360; az+=10)
             {
                 buttonMoveSensor.Enabled = false;
+               
+                _serialPort.WriteLine(Motors.Azimuth + "." + az.ToString());
+                Thread.Sleep(100);
+                
 
-                _serialPort.WriteLine(FormCommand(Motors.Azimuth, az));
 
-                for (el = 0; el < 90; el++)
+                for (el = 0; el < 45; el+=5)
                 {
-                    _serialPort.WriteLine(FormCommand(Motors.Elevation, el));
+                    _serialPort.WriteLine(Motors.Elevation + "." + el.ToString());
+                    Thread.Sleep(100);
 
                     try
                     {
@@ -103,8 +109,6 @@ namespace LIDAR_app
                         if (int.TryParse(_serialPort.ReadLine(), out distance))
                         {
                             List<double> row = new List<double>() { AngleToRad(az), AngleToRad(el), (int)distance };
-
-                           
 
                             _dataMatrix.Add(row);
                         }
@@ -121,7 +125,7 @@ namespace LIDAR_app
                         _dataMatrix = null;
                     }
 
-                    Thread.Sleep(50);
+                    Thread.Sleep(100);
                 }
             }
 
@@ -227,7 +231,7 @@ namespace LIDAR_app
             {
                 double theta = row[0];
                 double phi = row[1];
-                double distance = row[2];
+                double distance = (double)row[2]/100;
 
                 double x = distance * Math.Cos(theta) * Math.Cos(phi);
                 double y = distance * Math.Sin(theta) * Math.Cos(phi);
@@ -324,6 +328,11 @@ namespace LIDAR_app
             Environment.Exit(0);
         }
 
+        private void LidarForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         /// <summary>
         /// Displays what's currently in the _displayMatrix
         /// </summary>
@@ -338,7 +347,7 @@ namespace LIDAR_app
 
                 foreach(var row in _dataMatrix)
                 {
-                    textBox1.Text += "Az: " + row[0] + " El: " + row[1] + " D: " + row[2];
+                    textBox1.Text += "Az: " + row[0] + " El: " + row[1] + " D: " + row[2]+"\n";
                 }
 
                 Thread.Sleep(500);

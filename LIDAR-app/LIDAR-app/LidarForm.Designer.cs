@@ -157,7 +157,7 @@
             // 
             // buttonCommSettings
             // 
-            this.buttonCommSettings.Location = new System.Drawing.Point(292, 64);
+            this.buttonCommSettings.Location = new System.Drawing.Point(408, 59);
             this.buttonCommSettings.Name = "buttonCommSettings";
             this.buttonCommSettings.Size = new System.Drawing.Size(171, 23);
             this.buttonCommSettings.TabIndex = 1;
@@ -177,7 +177,7 @@
             // 
             // buttonExport
             // 
-            this.buttonExport.Location = new System.Drawing.Point(292, 140);
+            this.buttonExport.Location = new System.Drawing.Point(408, 138);
             this.buttonExport.Name = "buttonExport";
             this.buttonExport.Size = new System.Drawing.Size(171, 23);
             this.buttonExport.TabIndex = 1;
@@ -187,7 +187,7 @@
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(292, 178);
+            this.buttonClear.Location = new System.Drawing.Point(408, 178);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(171, 23);
             this.buttonClear.TabIndex = 1;
@@ -207,7 +207,7 @@
             // 
             // buttonSetPort
             // 
-            this.buttonSetPort.Location = new System.Drawing.Point(292, 98);
+            this.buttonSetPort.Location = new System.Drawing.Point(408, 98);
             this.buttonSetPort.Name = "buttonSetPort";
             this.buttonSetPort.Size = new System.Drawing.Size(171, 23);
             this.buttonSetPort.TabIndex = 6;
@@ -220,7 +220,7 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(292, 207);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(171, 152);
+            this.groupBox1.Size = new System.Drawing.Size(388, 152);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Distance Data";
@@ -230,14 +230,15 @@
             this.textBox1.Location = new System.Drawing.Point(7, 20);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 126);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(376, 126);
             this.textBox1.TabIndex = 0;
             // 
             // LidarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 450);
+            this.ClientSize = new System.Drawing.Size(708, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonSetPort);
             this.Controls.Add(this.elevation_box);
@@ -259,6 +260,7 @@
             this.Name = "LidarForm";
             this.Text = "LIDAR by Edin & Erik";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LidarForm_FormClosed);
+            this.Load += new System.EventHandler(this.LidarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.azimuth_box)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.elevation_box)).EndInit();
             this.groupBox1.ResumeLayout(false);
