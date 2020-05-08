@@ -28,6 +28,7 @@ namespace LIDAR_app
 
         int az = 0, el = 0;
 
+        bool clickedImportOnce = false;
 
         public LidarForm()
         {
@@ -294,6 +295,17 @@ namespace LIDAR_app
 
         private void buttonExport_Click(object sender, EventArgs e)
         {
+            if(_dataMatrix == null)
+            {
+                MessageBox.Show("Your data matrix is empty! \nTry importing data or doing a sensor recording.");
+                return;
+            }
+
+            if(_dataMatrix.Count == 0)
+            {
+                MessageBox.Show("Your data matrix is empty! \nTry importing data or doing a sensor recording.");
+                return;
+            }
 
             SaveFileDialog save = new SaveFileDialog();
 
@@ -307,13 +319,11 @@ namespace LIDAR_app
 
                 StreamWriter writer = new StreamWriter(save.OpenFile());
 
-                for (int i = 0; i < textBox1.TextLength; i++)
-
+                foreach (var row in _dataMatrix)
                 {
-
-                    writer.WriteLine(textBox1.Text[i]);
-
+                   writer.WriteLine("Azimuth: " + row[0] + " Elevation: " + row[1] + " distance: " + row[2]);
                 }
+
 
                 writer.Dispose();
 
@@ -333,6 +343,67 @@ namespace LIDAR_app
 
         }
 
+        private void buttonImport_Click(object sender, EventArgs e)
+        {
+            
+            if ((_dataMatrix != null) && (clickedImportOnce == false))
+            {
+                MessageBox.Show("The data matrix isn't empty, if you really want to import click \n" +
+                    " Import data again.");
+                clickedImportOnce = true;
+                return;
+            }
+
+            _dataMatrix = new List<List<double>>();
+
+            OpenFileDialog theDialog = new OpenFileDialog();
+            theDialog.Title = "Open Text File";
+            theDialog.Filter = "TXT files|*.txt";
+            theDialog.InitialDirectory = @"C:\";
+            if (theDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string sourceFile = theDialog.FileName;
+                    string[] positionRows = File.ReadAllLines(sourceFile);
+
+                    if(positionRows.Length == 0)
+                    {
+                        MessageBox.Show("Your file is empty.");
+                        return;
+                    }
+
+                    foreach(var row in positionRows)
+                    {
+                        string[] numbers = Regex.Split(row, @"\D+");
+
+                        if (numbers.Length != 4)
+                        {
+                            MessageBox.Show("Your data file isn't okay.\n" +
+                                " Try a new one. Data matrix is reset.");
+                            _dataMatrix = null;
+                            return;
+                        }
+
+                        double az = double.Parse(numbers[1]);
+                        double el = double.Parse(numbers[2]);
+                        double dist = double.Parse(numbers[3]);
+
+                        _dataMatrix.Add(new List<double>(){ az, el, dist });
+
+                    }
+                    
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+
+
+        }
+
         /// <summary>
         /// Displays what's currently in the _displayMatrix
         /// </summary>
@@ -347,7 +418,7 @@ namespace LIDAR_app
 
                 foreach(var row in _dataMatrix)
                 {
-                    textBox1.Text += "Az: " + row[0] + " El: " + row[1] + " D: " + row[2]+"\n";
+                    textBox1.Text += "Az: " + row[0] + " El: " + row[1] + " D: " + row[2];
                 }
 
                 Thread.Sleep(500);

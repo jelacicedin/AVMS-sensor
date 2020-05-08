@@ -48,6 +48,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.buttonImport = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.azimuth_box)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.elevation_box)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -177,7 +179,7 @@
             // 
             // buttonExport
             // 
-            this.buttonExport.Location = new System.Drawing.Point(408, 138);
+            this.buttonExport.Location = new System.Drawing.Point(299, 143);
             this.buttonExport.Name = "buttonExport";
             this.buttonExport.Size = new System.Drawing.Size(171, 23);
             this.buttonExport.TabIndex = 1;
@@ -234,11 +236,22 @@
             this.textBox1.Size = new System.Drawing.Size(376, 126);
             this.textBox1.TabIndex = 0;
             // 
+            // buttonImport
+            // 
+            this.buttonImport.Location = new System.Drawing.Point(490, 143);
+            this.buttonImport.Name = "buttonImport";
+            this.buttonImport.Size = new System.Drawing.Size(164, 23);
+            this.buttonImport.TabIndex = 8;
+            this.buttonImport.Text = "Import Data";
+            this.buttonImport.UseVisualStyleBackColor = true;
+            this.buttonImport.Click += new System.EventHandler(this.buttonImport_Click);
+            // 
             // LidarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 450);
+            this.Controls.Add(this.buttonImport);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonSetPort);
             this.Controls.Add(this.elevation_box);
@@ -291,6 +304,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button buttonImport;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 
