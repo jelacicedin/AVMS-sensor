@@ -100,7 +100,7 @@ namespace SerialTest
         {
             try
             {
-                textBoxReceive.Text =_serialPort.ReadLine();
+                textBoxReceive.Text =  _serialPort.ReadLine();
             } catch (TimeoutException ex)
             {
                 MessageBox.Show(ex.Message);
