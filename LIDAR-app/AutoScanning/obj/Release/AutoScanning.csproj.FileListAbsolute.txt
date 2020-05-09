@@ -1,0 +1,9 @@
+C:\Users\jelac\OneDrive\Desktop\School\AVMS-sensor\AVMS-sensor\LIDAR-app\AutoScanning\bin\Release\AutoScanning.exe.config
+C:\Users\jelac\OneDrive\Desktop\School\AVMS-sensor\AVMS-sensor\LIDAR-app\AutoScanning\bin\Release\AutoScanning.exe
+C:\Users\jelac\OneDrive\Desktop\School\AVMS-sensor\AVMS-sensor\LIDAR-app\AutoScanning\bin\Release\AutoScanning.pdb
+C:\Users\jelac\OneDrive\Desktop\School\AVMS-sensor\AVMS-sensor\LIDAR-app\AutoScanning\obj\Release\AutoScanning.csprojAssemblyReference.cache
+C:\Users\jelac\OneDrive\Desktop\School\AVMS-sensor\AVMS-sensor\LIDAR-app\AutoScanning\obj\Release\AutoScanning.FormAutoScan.resources
+C:\Users\jelac\OneDrive\Desktop\School\AVMS-sensor\AVMS-sensor\LIDAR-app\AutoScanning\obj\Release\AutoScanning.Properties.Resources.resources
+C:\Users\jelac\OneDrive\Desktop\School\AVMS-sensor\AVMS-sensor\LIDAR-app\AutoScanning\obj\Release\AutoScanning.csproj.GenerateResource.cache
+C:\Users\jelac\OneDrive\Desktop\School\AVMS-sensor\AVMS-sensor\LIDAR-app\AutoScanning\obj\Release\AutoScanning.exe
+C:\Users\jelac\OneDrive\Desktop\School\AVMS-sensor\AVMS-sensor\LIDAR-app\AutoScanning\obj\Release\AutoScanning.pdb

@@ -91,6 +91,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AutoScanning\AutoScanning.csproj">
+      <Project>{7a5422c7-6211-4c1d-b0dd-586a31d81e48}</Project>
+      <Name>AutoScanning</Name>
+    </ProjectReference>
     <ProjectReference Include="..\packages\0.9.0.9 OpenGL Sources\OpenTKLib\OpenTKLib.csproj">
       <Project>{df1f2330-134c-4ec6-a97c-3011d3072f0a}</Project>
       <Name>OpenTKLib</Name>

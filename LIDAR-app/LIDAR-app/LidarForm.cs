@@ -12,6 +12,8 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AutoScanning;
+
 
 namespace LIDAR_app
 {
@@ -30,12 +32,25 @@ namespace LIDAR_app
 
         bool clickedImportOnce = false;
 
+        private int _azimuthLimit = 360;
+        private int _elevationLimit = 50;
+        private int _azimuthStep = 5;
+        private int _elevationStep = 5;
+
+        delegate void SetTextCallback(string text);
+
+
         public LidarForm()
         {
             InitializeComponent();
             Task.Run(() => SetCurrentReading());
             Task.Run(() => DisplayData());
             _dataMatrix = null;
+
+            _azimuthLimit = 360;
+            _elevationLimit = 50;
+            _azimuthStep = 5;
+            _elevationStep = 5;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -89,7 +104,7 @@ namespace LIDAR_app
         /// </summary>
         private void CoverSphere()
         {
-            for (az = 0; az < 360; az+=10)
+            for (az = 0; az < _azimuthLimit; az+=_azimuthStep)
             {
                 buttonMoveSensor.Enabled = false;
                
@@ -98,7 +113,7 @@ namespace LIDAR_app
                 
 
 
-                for (el = 0; el < 45; el+=5)
+                for (el = 0; el < _elevationLimit; el+=_elevationStep)
                 {
                     _serialPort.WriteLine(Motors.Elevation + "." + el.ToString());
                     Thread.Sleep(100);
@@ -404,6 +419,89 @@ namespace LIDAR_app
 
         }
 
+        private void adjustLimitsButton_Click(object sender, EventArgs e)
+        {
+            FormAutoScan f = new FormAutoScan();
+
+            lock (locker)
+            {
+                if (f.ShowDialog() == DialogResult.OK)
+                {
+                    _azimuthLimit = f.AzimuthLimit;
+                    _elevationLimit = f.ElevationLimit;
+                    _azimuthStep = f.AzimuthStep;
+                    _elevationStep = f.ElevationStep;
+                }
+            }
+            
+
+        }
+
+        private void Update1(string text)
+        {
+            if (this.azimuthLimitBox.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(Update1);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.azimuthLimitBox.Text = text;
+            }
+        }
+
+        private void Update2(string text)
+        {
+            if (this.elevationLimitBox.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(Update2);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.elevationLimitBox.Text = text;
+            }
+        }
+
+        private void Update3(string text)
+        {
+            if (this.azimuthStepBox.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(Update3);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.azimuthStepBox.Text = text;
+            }
+        }
+
+        private void Update4(string text)
+        {
+            if (this.elevationStepBox.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(Update4);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.elevationStepBox.Text = text;
+            }
+        }
+
+        private void Update5(string textLines)
+        {
+            if (this.textBox1.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(Update5);
+                this.Invoke(d, new object[] { textLines });
+            }
+            else
+            {
+                this.textBox1.Text = textLines;
+            }
+        }
+
         /// <summary>
         /// Displays what's currently in the _displayMatrix
         /// </summary>
@@ -411,17 +509,28 @@ namespace LIDAR_app
         {
             while (true)
             {
-                if(_dataMatrix == null)
+
+                Update1(_azimuthLimit.ToString());
+                Update2(_elevationLimit.ToString());
+                Update3(_azimuthStep.ToString());
+                Update4(_elevationStep.ToString());
+
+
+                if (_dataMatrix == null)
                 {
                     continue;
                 }
 
-                foreach(var row in _dataMatrix)
+                string tmp = "";
+                foreach (var row in _dataMatrix)
                 {
-                    textBox1.Text += "Az: " + row[0] + " El: " + row[1] + " D: " + row[2];
+                    tmp += "Az: " + row[0] + " El: " + row[1] + " D: " + row[2] + Environment.NewLine;
                 }
 
+                Update5(tmp);
+
                 Thread.Sleep(500);
+
             }
         }
     }
