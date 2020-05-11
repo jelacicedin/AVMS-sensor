@@ -400,9 +400,9 @@ namespace LIDAR_app
                             return;
                         }
 
-                        double az = double.Parse(numbers[1]);
-                        double el = double.Parse(numbers[2]);
-                        double dist = double.Parse(numbers[3]);
+                        double az = PI/180*double.Parse(numbers[1]);
+                        double el = PI / 180 * double.Parse(numbers[2]);
+                        double dist = PI / 180 * double.Parse(numbers[3]);
 
                         _dataMatrix.Add(new List<double>(){ az, el, dist });
 
