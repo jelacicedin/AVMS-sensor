@@ -1,5 +1,7 @@
 #LIDAR-app
 
+For running the final version of the application, just run LIDAR-app.exe shortcut
+
 The commands it sends to the arduino are of the form _._
 where the first _ can be either "Azimuth" (which means the base motor) or "Elevation" (which means the sensor motor). 
 The second _ is the int value of the angle (in degrees, int!) that the chosen motor needs to achieve.
